@@ -1,172 +1,61 @@
-import React from 'react'
+import React from 'react';
 
 const Service = () => {
-    return (
-        <div>
-            <div className='pt-16'>
-                <div
-                    className="w-100 mb-3"
-                    style={ {
-                        height: "50vh",
-                        backgroundImage: `url('image/contactimg.png')`,
-                        backgroundSize: "cover", // Optional: Ensevent_management/public/image/contactimg.pngures the image covers the div
-                        backgroundPosition: "center", // Optional: Centers the image
-                    } }
-                >
-                    <div className='d-flex flex-col justify-center items-center h-full'>
-                        <p className='text-4xl font-bold font-serif text-red-600 '>ABOUT US</p>
-                        <p className='text-4xl font-bold font-serif  text-orange-400'>Elevating Events</p>
-                        <p className='text-4xl font-bold font-serif text-orange-400  '>Enchanting Experience.</p>
+  return (
+    <div className="bg-gradient-to-b from-purple-100 to-white text-gray-900 font-sans">
 
+      {/* Hero Section */}
+      <div
+        className="w-full mb-16"
+        style={{
+          height: "50vh",
+          backgroundImage: `url('image/contactimg.png')`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="flex flex-col justify-center items-center h-full bg-gradient-to-t from-black to-transparent">
+          <p className="text-5xl font-extrabold text-white mb-2">ABOUT US</p>
+          <p className="text-5xl font-bold text-orange-400 drop-shadow-lg">Elevating Events</p>
+          <p className="text-4xl font-medium text-orange-300">Enchanting Experience</p>
+        </div>
+      </div>
 
-                    </div>
-
+      {/* Services Section */}
+      <div className="services-area-2 services">
+        <div className="container mx-auto px-4">
+          <div className="services-area-inner space-y-12">
+            {/* Service Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+              {[
+                { title: "Ideating", img: "idea.png", desc: "Creative planning and brainstorming to bring your vision to life." },
+                { title: "Events", img: "events.png", desc: "From concerts to conferences, we handle all event logistics." },
+                { title: "Activations", img: "activities.png", desc: "Engaging activities that leave lasting impressions." },
+                { title: "Exhibitions", img: "exhibition.png", desc: "Showcase your products with stunning exhibitions." },
+                { title: "Artist Acquisitions", img: "acquisition.png", desc: "Connecting you with the best artists for your event." },
+                { title: "Intellectual Property", img: "intellectual_property.png", desc: "Safeguard your creative assets and ideas." },
+                { title: "Merchandising", img: "merchandising.png", desc: "Branded items that help promote and enhance your event." },
+                { title: "Wedding", img: "wedding.png", desc: "Creating unforgettable weddings with personalized touches." },
+              ].map((service, index) => (
+                <div key={index} className="text-center bg-white shadow-lg rounded-lg hover:scale-105 transition-transform duration-300 ease-in-out">
+                  <div className="p-6">
+                    <img
+                      src={`assets/images/services/icon/${service.img}`}
+                      alt={service.title}
+                      className="w-24 h-24 mx-auto mb-4 object-contain"
+                    />
+                    <h3 className="text-2xl font-semibold text-purple-700">{service.title}</h3>
+                    <p className="text-lg text-gray-600 mt-2">{service.desc}</p>
+                  </div>
                 </div>
+              ))}
             </div>
+          </div>
+        </div>
+      </div>
 
+    </div>
+  );
+};
 
-            <div className="services-area-2 services">
-                <div className="container">
-                    <div className="services-area-inner">
-                        <div className="services-bottom">
-                            <div className="services-item">
-                                <div className="row">
-                                    <div className="col-lg-4 col-md-6 text-center">
-                                        <div className="ms-sb img-top">
-                                            <div className="ms-sb--img boxed one">
-
-                                                <img src="assets/images/services/icon/idea.png" className="attachment-full size-full" alt="image" />
-
-                                                <div className="ms-sb--inner">
-                                                    <h3 className="ms-sb--title">
-                                                        <span>Ideating</span>
-                                                    </h3>
-                                                    <p className="ms-sb--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4 col-md-6 text-center">
-                                            <div className="ms-sb img-top">
-
-                                                <div className="ms-sb--img boxed two">
-                                                    <img src="assets/images/services/icon/events.png" className="attachment-full size-full" alt="image" />
-                                                </div>
-                                                <div className="ms-sb--inner">
-                                                    <h3 className="ms-sb--title">
-                                                        <span>Events</span>
-                                                    </h3>
-                                                    <p className="ms-sb--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4 col-md-6 text-center">
-                                            <div className="ms-sb img-top">
-
-                                                <div className="ms-sb--img boxed three">
-                                                    <img src="assets/images/services/icon/activities.png" className="attachment-full size-full" alt="image" />
-                                                </div>
-                                                <div className="ms-sb--inner">
-                                                    <h3 className="ms-sb--title">
-                                                        <span>Activations</span>
-                                                    </h3>
-                                                    <p className="ms-sb--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4 col-md-6 text-center">
-                                            <div className="ms-sb img-top">
-
-                                                <div className="ms-sb--img boxed four">
-                                                    <img src="assets/images/services/icon/exhibition.png" className="attachment-full size-full" alt="image" />
-                                                </div>
-                                                <div className="ms-sb--inner">
-                                                    <h3 className="ms-sb--title">
-                                                        <span>Exhibitions</span>
-                                                    </h3>
-                                                    <p className="ms-sb--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4 col-md-6 text-center">
-                                            <div className="ms-sb img-top">
-
-                                                <div className="ms-sb--img boxed five">
-                                                    <img src="assets/images/services/icon/acquisition.png" className="attachment-full size-full" alt="image" />
-                                                </div>
-                                                <div className="ms-sb--inner">
-                                                    <h3 className="ms-sb--title">
-                                                        <span>Artist Acquisitions</span>
-                                                    </h3>
-                                                    <p className="ms-sb--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4 col-md-6 text-center">
-                                            <div className="ms-sb img-top">
-
-                                                <div className="ms-sb--img boxed six">
-                                                    <img src="assets/images/services/icon/intellectual_property.png" className="attachment-full size-full" alt="image" />
-                                                </div>
-                                                <div className="ms-sb--inner">
-                                                    <h3 className="ms-sb--title">
-                                                        <span>Intellectual Property</span>
-                                                    </h3>
-                                                    <p className="ms-sb--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4 col-md-6 text-center">
-                                            <div className="ms-sb img-top">
-
-                                                <div className="ms-sb--img boxed one">
-                                                    <img src="assets/images/services/icon/merchandising.png" className="attachment-full size-full" alt="image" />
-                                                </div>
-                                                <div className="ms-sb--inner">
-                                                    <h3 className="ms-sb--title">
-                                                        <span>Merchandising</span>
-                                                    </h3>
-                                                    <p className="ms-sb--text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-4 col-md-6 text-center">
-                                            <div className="ms-sb img-top">
-
-                                                <div className="ms-sb--img boxed two">
-                                                    <img src="assets/images/services/icon/wedding.png" className="attachment-full size-full" alt="image" />
-                                                </div>
-                                                <div className="ms-sb--inner">
-                                                    <h3 className="ms-sb--title">
-                                                        <span>Wedding</span>
-                                                    </h3>
-                                                    <p className="ms-sb--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-                    </div >
-
-
-                </div >
-                </div>
-                </div>
-                )
-}
-
-                export default Service
+export default Service;

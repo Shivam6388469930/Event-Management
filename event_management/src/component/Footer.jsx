@@ -1,74 +1,63 @@
-import React from 'react'
+import React from 'react';
 
 const Footer = () => {
   return (
-    <div>
-     <div className="flex flex-col bg-black text-white  h-auto justify-around  items-center">
-      <div className="flex flex-col bg-black text-white w-[90%]  justify-around  items-center  md:flex-row md: h-auto">
-       
-      
-       <div>
-        <ul>
-            <li>
-                <h1 className='text-2xl mt-3'>Company</h1>
-            </li>
-            <div className="py-3 text-xl"><li><button>About</button></li>
-            <li><button>Blog</button></li>
-            <li><button>Jobs</button></li>
-            <li><button>Parterns</button></li></div>
-            
-        </ul>
-       </div>
-       <div>
-       <ul>
-            <li>
-                <h1 className='text-2xl mt-3'>Solutions</h1>
-            </li>
-            <div className="py-3 text-xl"><li><button>Marketing</button></li>
-            <li><button>Analytics</button></li>
-            <li><button>Commerce</button></li>
-            <li><button>Insights</button></li>
-            <li><button>Support</button></li></div>
-            
-        </ul>
-       </div>
-       <div>
-       <ul>
-            <li>
-                <h1 className='text-2xl mt-3'>Documentation</h1>
-            </li>
-            <div className="py-3 text-xl"><li><button>Guides</button></li>
-            <li><button>API Status</button></li>
-         </div>
-            
-        </ul>
-       </div>
-       <div>
-       <ul>
-            <li>
-                <h1 className='text-2xl mt-3'>Legal</h1>
-            </li>
-            <div className="py-3 text-xl"><li><button>Claim</button></li>
-            <li><button>Privacy</button></li>
-            <li><button>Terms</button></li>
-           </div>
-            
-        </ul>
-       </div>
-       </div>
-       <div className="flex justify-center items-center">
-        <div>
-          <div className='flex flex-col justify-center items-center my-2 pb-3'>
-            <p>@2023 My Company.All rights reserved</p>
-            <p>Made with Love by Me.</p>
-            <p>Icons by Freepik From www.flaticon.com</p>
+    <footer className="bg-black text-white py-10 mt-10">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Footer links grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+          {/* Company */}
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Company</h2>
+            <ul className="space-y-2 text-lg text-gray-300">
+              <li><button className="hover:text-orange-400">About</button></li>
+              <li><button className="hover:text-orange-400">Blog</button></li>
+              <li><button className="hover:text-orange-400">Jobs</button></li>
+              <li><button className="hover:text-orange-400">Partners</button></li>
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Solutions</h2>
+            <ul className="space-y-2 text-lg text-gray-300">
+              <li><button className="hover:text-orange-400">Marketing</button></li>
+              <li><button className="hover:text-orange-400">Analytics</button></li>
+              <li><button className="hover:text-orange-400">Commerce</button></li>
+              <li><button className="hover:text-orange-400">Insights</button></li>
+              <li><button className="hover:text-orange-400">Support</button></li>
+            </ul>
+          </div>
+
+          {/* Documentation */}
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Documentation</h2>
+            <ul className="space-y-2 text-lg text-gray-300">
+              <li><button className="hover:text-orange-400">Guides</button></li>
+              <li><button className="hover:text-orange-400">API Status</button></li>
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h2 className="text-2xl font-bold mb-3">Legal</h2>
+            <ul className="space-y-2 text-lg text-gray-300">
+              <li><button className="hover:text-orange-400">Claim</button></li>
+              <li><button className="hover:text-orange-400">Privacy</button></li>
+              <li><button className="hover:text-orange-400">Terms</button></li>
+            </ul>
           </div>
         </div>
-       </div>
-      
-     </div>
-    </div>
-  )
-}
- 
-export default Footer
+
+        {/* Bottom bar */}
+        <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+          <p>© 2023 My Company. All rights reserved.</p>
+          <p>Made with ❤️ by Me.</p>
+          <p>Icons by Freepik from www.flaticon.com</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

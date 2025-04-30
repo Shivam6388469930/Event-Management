@@ -1,68 +1,94 @@
-import React from 'react'
+import React from 'react';
 
 const Merchanding = () => {
   return (
-    <div>
-       <div className='d-flex justify-around h-96'>
-                <div className='d-flex justify-center items-center w-[40%] h-full '>
-                    <p className='  font-bold' style={ { fontSize: "4rem" } }>Merchanding</p>
-                </div>
-                <div className='d-flex justify-center items-center w-[60%] h-full '>
-                    <p className=' font-bold' style={ { fontSize: "2rem" } }>
-                    It is the ability to understand the need of clients and offer a remarkable customer experience, deliver goods and services on time. Keeping in mind the Quality.
-                       </p>
-                </div>
-            </div>
-            <div className='d-flex justify-center h-[70vh]'>
-                <img src="services/merchandise.jpg" alt="" srcset="" style={ { width: "100%", height: "100%" } } />
-            </div>
-            <div>
-                <p className=' font-bold' style={ { fontSize: "1.5rem" } }>At CS Entertainment, we believe that merchandising plays a crucial role in enhancing the overall event experience and leaving a lasting impression on attendees.</p>
-            </div>
-            <div className='m-3'>
-                <h1 className=' font-bold m-2' style={ { fontSize: "2.5rem" } }>Discover the diverse array of merchandising opportunities we provide to elevate your event:</h1>
-                <div className='d-flex flex-col justify-around'>
-                <p class="desc1 mt-4 text-xl font-bold">  <strong style={ { fontSize: "2rem", fontWeight: "bolder" } } >Branded Merchandise:</strong> We offer a comprehensive range of branded merchandise options that help promote your event and leave a lasting impression. From apparel and accessories to promotional items and collectibles, we can customize merchandise with your event logo, theme, and messaging. Our high-quality products ensure that attendees can proudly wear, use, or display them long after the event is over.</p>
-                        
-                        <p class="desc1 text-xl font-bold">  <strong style={ { fontSize: "2rem", fontWeight: "bolder" } }>Limited Edition Items:</strong> Create a sense of exclusivity and excitement with limited edition merchandise. We can help you design and produce limited edition items that are unique to your event, creating a sense of urgency and desirability among attendees. Limited edition merchandise not only serves as a special keepsake but also enhances the perceived value of your event.</p>
-                            
-                        <p class="desc1 text-xl font-bold">  <strong style={ { fontSize: "2rem", fontWeight: "bolder" } }>Event-specific Merchandise:</strong> Tailor your merchandise to the specific theme or purpose of your event. Whether it's a concert, conference, festival, or sporting event, we can curate merchandise that aligns with the event's identity and resonates with attendees. From concert tour merchandise and conference swag bags to festival-themed apparel and sports memorabilia, we have you covered.</p>
-                            
-                        <p class="desc1 text-xl font-bold" >  <strong style={ { fontSize: "2rem", fontWeight: "bolder" } }>Sponsor Merchandise Integration:</strong> Maximize the visibility and impact of your sponsors by integrating their branding into event merchandise. We can work closely with your sponsors to create co-branded merchandise that showcases their products or services alongside your event branding. This creates valuable exposure for sponsors and adds value to the merchandise offerings.</p>
-                         
-                            
-                        <p class="desc1 text-xl font-bold" >Our merchandising solutions are designed to enhance the event experience, foster engagement, and create lasting memories for attendees. We provide end-to-end support, from merchandise design and production to inventory management and sales logistics.
-    
-                            If you're ready to take your event merchandising to the next level, contact us today. Together, we'll curate a merchandise lineup that resonates with your audience, generates excitement, and serves as a cherished reminder of your exceptional event.</p>
-                    
-                
-                </div>
-           
-            </div>
-            <div className='m-4 text-3xl font-semibold'>
-                <p>Events Gallery</p>
-            </div>
-            <div className='flex m-14'>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/23.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "20vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/26.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "10vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/40.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "-4vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/11.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "5vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/12.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
+    <div className="bg-gradient-to-b from-white to-purple-50 text-gray-900 font-sans px-4 md:px-10 py-16">
+      {/* Hero Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center min-h-[60vh] mb-16">
+        <div className="w-full md:w-[40%] text-center md:text-left">
+          <h1 className="text-5xl font-extrabold text-purple-700 drop-shadow-md">Merchanding</h1>
+        </div>
+        <div className="w-full md:w-[60%] mt-8 md:mt-0">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed text-gray-700">
+            Understanding client needs and delivering quality goods and services on time — that’s our superpower.
+          </p>
+        </div>
+      </div>
 
+      {/* Image Section */}
+      <div className="w-full max-w-6xl mx-auto mb-16">
+        <img
+          src="services/merchandise.jpg"
+          alt="Merchandise Showcase"
+          className="w-full h-[50vh] object-cover rounded-3xl shadow-xl hover:scale-105 transition-transform duration-500"
+        />
+      </div>
 
+      {/* Description Section */}
+      <div className="max-w-5xl mx-auto space-y-10">
+        <p className="text-xl font-semibold text-gray-800">
+          At <span className="text-purple-700 font-bold">CS Entertainment</span>, we believe merchandising enhances the overall event experience and creates lasting impressions.
+        </p>
+
+        <h2 className="text-4xl font-bold text-purple-800 border-b-4 border-purple-300 inline-block pb-2">
+          Why Merchandising Matters
+        </h2>
+
+        <div className="space-y-8 text-lg leading-relaxed">
+          <div>
+            <h3 className="text-2xl text-purple-700 font-bold mb-2">🎁 Branded Merchandise</h3>
+            <p>
+              Custom t-shirts, caps, bags & more — personalized with your event's logo & theme. They’re takeaways that last long after the music fades.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl text-purple-700 font-bold mb-2">🔥 Limited Edition Drops</h3>
+            <p>
+              Drive excitement and exclusivity with limited edition items. Scarcity adds value and makes your event unforgettable.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl text-purple-700 font-bold mb-2">🎯 Event-Specific Themes</h3>
+            <p>
+              From conference kits to festival wristbands, everything is tailored to your event’s vibe and vision.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl text-purple-700 font-bold mb-2">🤝 Sponsor Integration</h3>
+            <p>
+              Boost sponsor visibility with co-branded gear. Great for ROI, better for collaboration.
+            </p>
+          </div>
+
+          <p className="text-lg">
+            We handle it all — from design to distribution. Let us create merchandise your audience will cherish.
+          </p>
+        </div>
+      </div>
+
+      {/* Gallery Section */}
+      <div className="mt-20">
+        <h2 className="text-3xl font-bold text-center text-purple-800 mb-10">📸 Events Gallery</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 px-2 md:px-0">
+          {["23.jpeg", "26.jpeg", "40.jpeg", "11.jpeg", "12.jpeg"].map((img, i) => (
+            <div
+              key={i}
+              className="rounded-2xl overflow-hidden shadow-lg hover:scale-105 hover:shadow-xl transition duration-300"
+            >
+              <img
+                src={`photogalleyimg/${img}`}
+                alt={`Gallery ${i + 1}`}
+                className="w-full aspect-[3/4] object-cover"
+              />
             </div>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Merchanding;

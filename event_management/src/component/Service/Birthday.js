@@ -1,71 +1,73 @@
-import React from 'react'
+import React from 'react';
 
 const Birthday = () => {
   return (
-    <div>
-       <div className='d-flex justify-around h-96'>
-                <div className='d-flex justify-center items-center w-[40%] h-full '>
-                    <p className='  font-bold' style={ { fontSize: "4rem" } }>Birthday</p>
-                </div>
-                <div className='d-flex justify-center items-center w-[60%] h-full '>
-                    <p className=' font-bold' style={ { fontSize: "2rem" } }>
-                        A daily routine for our creative minds joining for brain storming sessions and creating out of the box ideas which are always appreciated by our clients. These concepts are used as a backdrop of all events and promotions.</p>
-                </div>
+    <div className="bg-white text-gray-800">
+      {/* Hero Section */}
+      <div className="flex flex-wrap items-center justify-between px-8 py-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white">
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h1 className="text-5xl font-bold mb-6">Birthday</h1>
+          <p className="text-xl font-medium">
+            Daily brainstorming sessions fuel our creativity—shaping unique concepts and experiences that delight our clients.
+          </p>
+        </div>
+        <div className="w-full md:w-1/2 mt-8 md:mt-0">
+          <img
+            src="/image/vediokk.png"
+            alt="Birthday Events"
+            className="rounded-xl shadow-xl w-full h-[400px] object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Ideation Hub Description */}
+      <div className="px-8 py-12 max-w-6xl mx-auto">
+        <p className="text-2xl font-semibold mb-8 text-center">
+          Welcome to the Ideation Hub – where imagination meets execution.
+        </p>
+        <p className="text-lg text-gray-700 leading-relaxed">
+          At CS Entertainment, we thrive on creativity and innovation. This is the place where ideas take flight and where we shape the blueprint for unforgettable experiences. Our team of seasoned event professionals is here to collaborate with you, transforming your vision into a captivating reality.
+          <br /><br />
+          Whether it's a corporate gala, a grand wedding, or a themed extravaganza, we're here to brainstorm, conceptualize, and bring your event to life in ways you never imagined. From immersive themes to cutting-edge tech, our ideation process ensures your event stands out.
+        </p>
+      </div>
+
+      {/* Process Steps */}
+      <div className="bg-gray-100 px-8 py-16">
+        <h2 className="text-4xl font-bold text-center mb-10">Our Ideation Process</h2>
+        <div className="space-y-10 max-w-4xl mx-auto">
+          {[
+            { title: 'Discovery', desc: 'We start by getting to know you and your event goals. We dive deep into your ideas, themes, and desired outcomes.' },
+            { title: 'Brainstorming', desc: 'Our creative team generates fresh, on-theme ideas that are bold, unique, and truly aligned with your vision.' },
+            { title: 'Concept Development', desc: 'We build a cohesive event concept with every detail—decor, logistics, and engagement—tailored to perfection.' },
+            { title: 'Collaboration', desc: 'We welcome your input and tweak our concepts until they fit your dream perfectly.' },
+            { title: 'Presentation', desc: 'Get a visual plan of your event with mood boards, timelines, and the design layout.' },
+            { title: 'Finalization', desc: 'With your feedback, we lock in the final concept and move into execution mode.' },
+          ].map(({ title, desc }, i) => (
+            <div key={i}>
+              <h3 className="text-2xl font-bold text-pink-600">{title}</h3>
+              <p className="text-md text-gray-700 mt-2">{desc}</p>
             </div>
-            <div className='d-flex justify-center h-[70vh]'>
-                <img src="image/vediokk.png" alt="" srcset="" style={ { width: "100%", height: "100%" } } />
+          ))}
+        </div>
+      </div>
+
+      {/* Events Gallery */}
+      <div className="px-8 py-16">
+        <h2 className="text-4xl font-bold text-center mb-10">Events Gallery</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
+          {['23.jpeg', '26.jpeg', '40.jpeg', '11.jpeg', '12.jpeg'].map((img, i) => (
+            <div
+              key={i}
+              className="w-[300px] h-[400px] overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300 bg-white"
+            >
+              <img src={`/photogalleyimg/${img}`} alt="Gallery" className="w-full h-full object-cover" />
             </div>
-            <div>
-                <p className=' font-bold' style={ { fontSize: "1.5rem" } }>At CS Entertainment, we thrive on creativity and innovation. This is the place where ideas take flight and where we shape the blueprint for unforgettable experiences. Our team of seasoned event professionals is here to collaborate with you, transforming your vision into a captivating reality.
-
-                    Step into our Ideation Hub and explore a world of limitless possibilities. Whether it's a corporate gala, a grand wedding, or a themed extravaganza, we're here to brainstorm, conceptualize, and bring your event to life in ways you never imagined.
-
-                    From immersive themes to cutting-edge technology, from unique venues to jaw-dropping entertainment, our ideation process is fueled by imagination and tailored to your specific needs. We delve deep into the details, crafting every element to perfection, ensuring that your event stands out from the crowd.
-
-                    Leave no idea unexplored, no concept unimagined. Together, we'll create a remarkable event that captivates, inspires, and leaves a lasting impression. Get ready to embark on an ideation journey like no other.
-
-                    Let's collaborate, innovate, and make your event dreams a reality. Welcome to our Ideation Hub!"</p>
-            </div>
-            <div className='m-3'>
-                <h1 className=' font-bold' style={ { fontSize: "2.5rem" } }>Here's how our ideation process works:</h1>
-                <div className='d-flex flex-col justify-around'>
-                <p><span style={{fontSize:"2rem", fontWeight:"bolder"}}>Discovery:</span> We start by getting to know you and your event goals. We'll delve into your ideas, themes, and desired outcomes to gain a deep understanding of what you envision.</p>
-
-                    <p><span style={{fontSize:"2rem", fontWeight:"bolder"}}>Brainstorming:</span> Our creative minds come together to brainstorm fresh and innovative concepts that align perfectly with your event's essence. We explore unique themes, captivating experiences, and cutting-edge elements to set your event apart.</p>
-
-                    <p><span style={{fontSize:"2rem", fontWeight:"bolder"}}>Concept Development:</span> Building on the ideas generated, we craft a comprehensive event concept that captures the spirit of your occasion. We carefully curate each element, from decor and entertainment to logistics and guest engagement, to ensure a cohesive and unforgettable experience.</p>
-
-                    <p><span style={{fontSize:"2rem", fontWeight:"bolder"}}>Collaboration:</span> We believe in collaborative ideation, and your input is invaluable. We'll present our concepts to you, inviting your feedback and ideas to fine-tune the vision until it's exactly what you've dreamed of.</p>
-
-                    <p><span style={{fontSize:"2rem", fontWeight:"bolder"}}>Presentation:</span> Once we've refined the concept, we'll present you with a visual representation of the event's design, along with detailed plans and timelines. This gives you a glimpse of what your event will look like and assures you that we're on the right track.</p>
-
-                    <p><span style={{fontSize:"2rem", fontWeight:"bolder"}}>Finalization: </span>After incorporating your feedback and making necessary adjustments, we finalize the event concept and move forward with planning and execution, bringing the masterpiece to life.</p>
-                </div>
-            </div>
-            <div className='m-4 text-3xl font-semibold'>
-                <p>Events Gallery</p>
-            </div>
-            <div className='flex m-14'>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/23.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "20vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/26.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "10vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/40.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "-4vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/11.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "5vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/12.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-
-
-            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Birthday
+export default Birthday;

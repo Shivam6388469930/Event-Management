@@ -19,72 +19,57 @@ const Login = () => {
     if (!emailRegex.test(fdata.email)) return 'Invalid email format';
     return null;
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setLoading(true);
-  
-    // Validate the inputs before proceeding
+
     const validationError = validateInputs();
     if (validationError) {
       setError(validationError);
       setLoading(false);
       return;
     }
-  
+
     try {
-      // Assuming loginUser is an API call function
       const response = await loginUser(fdata);
-      // const result=response.json()
-      console.log("response:",response)
-  
-      // Ensure respooknse is in JSON format
       if (!response.success) {
-        alert("user not access")
-        // // Check if the response contains JSON, if not, handle accordingly
-        // const errorData = await response.text();  // Use text() for non-JSON responses
-        // setError(errorData || 'Login failed.');
+        alert("User access denied");
       } else {
-        // Ensure that the response is JSON, handle successful login
-        // const result = await response.json();  // Use json() only for JSON responses
         const { message, token, firstname } = response;
-        
-        // Store token and firstname in localStorage
         localStorage.setItem('token', token);
-        console.log(localStorage.setItem('firstname', firstname))
-        localStorage.setItem('firstname', firstname); 
-  
+        localStorage.setItem('firstname', firstname);
         alert('Login successful!');
         navigate('/'); // Redirect to dashboard
       }
     } catch (error) {
-      // Handle unexpected errors
       setError(error.message || 'An error occurred.');
-      console.error(error); // Log full error for debugging
+      console.error(error);
     } finally {
       setLoading(false);
     }
   };
-  
 
   return (
-    <div className="flex justify-center items-center h-screen bg-black" >
-      <div className="w-2/5 h-4/5 mt-5 border-2 border-black p-5 bg-yellow-200 " style={{backgroundImage:"public/photogalleyimg/Moraine_Lake_17092005.jpg" }}>
-        <h2 className="text-2xl text-center mb-4">Login</h2>
+    <div className="flex justify-center items-center h-screen bg-black bg-cover" style={{ backgroundImage: "url('your-image-url.jpg')" }}>
+      <div className="w-3/12 h-auto mt-5 p-8 bg-gradient-to-r from-sky-500 to-green-500 rounded-lg shadow-xl">
+        <h2 className="text-4xl text-center text-white font-semibold mb-6">Login</h2>
 
-        {error && <p className="text-red-500 text-center mb-3">{error}</p>}
+        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
-        <form onSubmit={handleSubmit} className="flex flex-col">
+        <form onSubmit={handleSubmit} className="flex flex-col space-y-6">
           {['email', 'password'].map((field, index) => (
-            <div key={index} className="flex flex-col w-full mb-3">
-              <label htmlFor={field} className="text-lg capitalize">
+            <div key={index} className="flex flex-col w-full">
+              <label htmlFor={field} className="text-lg text-white capitalize mb-2">
                 {field}:
               </label>
               <input
                 type={field}
                 id={field}
                 name={field}
-                className="border-2 border-black text-lg p-1"
+                className="border-2 border-gray-300 text-lg p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400 placeholder:text-gray-600"
+                placeholder={`Enter your ${field}`}
                 value={fdata[field]}
                 onChange={handleChange}
               />
@@ -94,7 +79,7 @@ const Login = () => {
           <button
             type="submit"
             disabled={loading}
-            className={`bg-sky-400 text-white font-medium text-2xl mb-2 px-4 py-2 hover:bg-green-400 ${
+            className={`bg-yellow-500 text-white font-medium text-xl py-3 rounded-md hover:bg-yellow-400 transition duration-300 ${
               loading ? 'opacity-50 cursor-not-allowed' : ''
             }`}
           >
@@ -102,9 +87,9 @@ const Login = () => {
           </button>
         </form>
 
-        <p className="text-xl text-center">
+        <p className="text-lg text-center mt-4 text-white">
           Don’t have an account?{' '}
-          <Link to="/register" className="text-blue-500 ml-2">
+          <Link to="/registration" className="text-blue-200 font-semibold hover:text-blue-400">
             Register
           </Link>
         </p>

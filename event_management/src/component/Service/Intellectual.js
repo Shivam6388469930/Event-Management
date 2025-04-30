@@ -1,66 +1,66 @@
-import React from 'react'
+import React from 'react';
 
 const Intellectual = () => {
   return (
-    <div>
-       <div className='d-flex justify-around h-96'>
-                <div className='d-flex justify-center items-center w-[40%] h-full '>
-                    <p className='  font-bold' style={ { fontSize: "4rem" } }>Intellectual Property</p>
-                </div>
-                <div className='d-flex justify-center items-center w-[60%] h-full '>
-                    <p className=' font-bold' style={ { fontSize: "2rem" } }>
-                    As the name of the company goes we are focused on creating different concepts related to entertainment and music always giving them a completely off beat track and thrill. Foot tapping, head banging, laughter ,suspense and it goes on ...keep a watch !!!</p>
-                </div>
-            </div>
-            <div className='d-flex justify-center h-[60vh]'>
-                <img src="image/vediokk.png" alt="" srcset="" style={ { width: "100%", height: "100%" } } />
-            </div>
-            <div>
-                <p className=' font-bold' style={ { fontSize: "1.5rem" } }>We understand the importance of protecting and respecting intellectual property rights. This page is dedicated to highlighting our commitment to safeguarding intellectual property in the event management industry.</p>
-            </div>
-            <div className='m-3'>
-                <h1 className=' font-bold' style={ { fontSize: "2.5rem" } }>Intellectual property is a valuable asset that deserves proper recognition and protection. Here's how we ensure the protection of intellectual property throughout our event management process:</h1>
-                <div className='d-flex flex-col justify-around'>
-               
+    <div className="bg-gradient-to-b from-white to-gray-50 text-gray-800 font-sans">
+      {/* Hero Section */}
+      <div className="flex flex-col md:flex-row justify-between items-center px-10 py-20">
+        <div className="w-full md:w-[40%] text-center md:text-left">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-purple-800 leading-tight">
+            Intellectual <br /> Property
+          </h1>
+        </div>
+        <div className="w-full md:w-[60%] mt-10 md:mt-0">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed">
+            As the name of the company goes, we focus on creating unique concepts in entertainment and music — always offbeat, always thrilling. Foot tapping, head banging, laughter, suspense... the journey goes on. Stay tuned!
+          </p>
+        </div>
+      </div>
 
-                   
+      {/* Image Section */}
+      <div className="flex justify-center my-10 px-4">
+        <div className="rounded-xl overflow-hidden shadow-lg w-full max-w-6xl">
+          <img src="image/vediokk.png" alt="IP Visual" className="w-full h-[60vh] object-cover" />
+        </div>
+      </div>
 
-                    <p class="desc1 mt-4">  <strong>Respecting Trademarks and Copyrights:</strong>We respect the trademarks and copyrights of individuals and organizations. When working with clients, we ensure that all materials used in the event, such as logos, branding elements, and creative content, comply with relevant trademark and copyright laws. We work closely with our clients to obtain necessary permissions and licenses for using copyrighted materials, ensuring that all intellectual property rights are respected.</p>
-                        
-                    <p class="desc1 mt-4">  <strong>Securing Licensing and Permissions:</strong> If an event involves performances, music, or visual content that is protected by intellectual property rights, we take the necessary steps to secure appropriate licenses and permissions. This includes obtaining performance rights licenses for live music, securing rights for projection of copyrighted images or videos, and acquiring necessary permissions for any other copyrighted materials used during the event. We work with trusted licensing agencies and copyright holders to ensure compliance with legal requirements.</p>
-                        
-                    <p class="desc1 mt-4">  <strong>Intellectual Property Education: </strong> We prioritize intellectual property education within our team and encourage responsible practices. Our event management professionals are knowledgeable about intellectual property laws and best practices. This enables us to guide clients and vendors in making informed decisions regarding the protection and use of intellectual property throughout the event planning and execution process.</p>
-                        
-                    <p class="desc1 mt-4">We believe that respecting intellectual property rights not only upholds legal and ethical standards but also fosters an environment of trust and creativity. By working closely with our clients, vendors, and partners, we ensure that intellectual property is protected, valued, and utilized in a responsible and compliant manner.</p>
-                        
-                    <p class="desc1 mt-4">If you have any questions or concerns regarding intellectual property in event management, please don't hesitate to reach out to us. We're committed to providing a secure and respectful environment for all stakeholders involved in our events, while upholding the integrity of intellectual property rights.</p>
-                        
-                </div>
-            </div>
-            <div className='m-4 text-3xl font-semibold'>
-                <p>Events Gallery</p>
-            </div>
-            <div className='flex m-14'>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/23.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "20vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/26.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "10vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/40.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "-4vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/11.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "5vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/12.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
+      {/* Description Section */}
+      <div className="max-w-6xl mx-auto px-6 py-10">
+        <p className="text-lg md:text-xl font-semibold mb-6">
+          At CS Entertainment, we recognize the significance of intellectual property in the world of creative expression. This space outlines how we protect and respect original content in all our events.
+        </p>
 
+        <h2 className="text-3xl font-bold text-purple-800 mb-6">Our IP Protection Framework</h2>
 
+        <div className="space-y-6">
+          <p><strong className="text-xl text-purple-700">Respecting Trademarks & Copyrights:</strong> We make sure all materials like logos, music, and creative assets comply with legal guidelines. Clients' content is used only with permission, ensuring full compliance.</p>
+          
+          <p><strong className="text-xl text-purple-700">Licensing & Permissions:</strong> Whether it’s music rights, visual projection, or media display — we collaborate with legal agencies to secure every necessary license, keeping everything lawful and professional.</p>
+
+          <p><strong className="text-xl text-purple-700">Team Awareness & Education:</strong> Our staff are trained to value and uphold IP rights. This empowers us to guide clients and execute events with full responsibility toward ownership and originality.</p>
+
+          <p>We believe this culture of respect not only sets industry benchmarks but also strengthens trust with clients, creators, and the audience.</p>
+
+          <p>Got questions about intellectual property in events? We're always happy to guide you through best practices and legal safety nets.</p>
+        </div>
+      </div>
+
+      {/* Gallery Section */}
+      <div className="px-6 py-10">
+        <h2 className="text-3xl font-bold mb-8 text-center">Events Gallery</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {["23.jpeg", "26.jpeg", "40.jpeg", "11.jpeg", "12.jpeg"].map((img, i) => (
+            <div
+              key={i}
+              className="overflow-hidden rounded-2xl shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
+            >
+              <img src={`photogalleyimg/${img}`} alt={`Event ${i}`} className="w-full h-[35vw] object-cover" />
             </div>
+          ))}
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Intellectual
+export default Intellectual;

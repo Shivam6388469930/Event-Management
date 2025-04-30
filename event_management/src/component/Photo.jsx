@@ -2,7 +2,7 @@ import React from 'react';
 import Eventcard from './Eventcard';
 import CARD from './Data';
 import AliceCarousel from 'react-alice-carousel';
-import {Link}from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Photo = () => {
   const responsive = {
@@ -14,16 +14,16 @@ const Photo = () => {
     1024: { items: 4.5 },
   };
 
-  // Ensure CARD is valid and map data safely
   const carouselItems = Array.isArray(CARD)
     ? CARD.map((item, index) => <Eventcard key={index} imagesrc={item.imageUrl} />)
     : [];
 
   const renderCarousel = (title) => (
-    <div className="container my-6">
-      <h1 className="text font-bold my-3 text-3xl">{title}</h1>
+    <div className="container my-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-6 underline decoration-orange-500 underline-offset-8">
+        {title}
+      </h2>
       <AliceCarousel
-        className="flex justify-center items-center"
         mouseTracking
         disableButtonsControls
         items={carouselItems}
@@ -34,43 +34,51 @@ const Photo = () => {
   );
 
   return (
-    <div>
-       <div
-                className="w-full mb-3  text-white "
-                style={ {
-                    height: "50vh",
-                    backgroundImage: `url('image/Carousel_at_Hyde_Park.jpg')`,
-                    backgroundSize: "cover", // Optional: Ensures the image covers the div
-                    backgroundPosition: "center", // Optional: Centers the image
-                } }
-            >
-                <div className='d-flex flex-col justify-center items-center h-full'>
-                 <p className='text-4xl font-bold font-serif '> Photo Gallery</p>
-                 <p className='text-xl font-bold font-serif  '>This event are manage and organized by our profesional teams.</p>
-
-
-                </div>
-            </div>
-      <div className="lg:col-span-3 " >
-        <div className="row  w-full">
-          <div className="flex flex-wrap mb-2 justify-center">
-            {carouselItems.length > 0 ? (
-              carouselItems
-            ) : (
-              <p>No items available to display.</p>
-            )}
-          </div>
+    <div className="bg-white text-gray-900 font-sans">
+      {/* Hero Section */}
+      <div
+        className="w-full h-[50vh] flex flex-col justify-center items-center text-white text-center"
+        style={{
+          backgroundImage: `url('image/Carousel_at_Hyde_Park.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        <div className="bg-black/60 w-full h-full flex flex-col justify-center items-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">Photo Gallery</h1>
+          <p className="text-lg md:text-xl font-medium">
+            Events crafted by our <span className="text-orange-400">professional team</span>.
+          </p>
         </div>
       </div>
-      {carouselItems.length > 0 && renderCarousel('Birthday Decoration')}
-      {carouselItems.length > 0 && renderCarousel('Wedding Decoration')}
-      {carouselItems.length > 0 && renderCarousel('Anniversary Decoration')}
-      <div>
-            <p className='font-bold font-serif  ' style={{fontSize:"4rem"}}>Evalute Your Events:</p>
-            <p className=' font-bold font-serif  ' style={{fontSize:"4rem"}}> Trust our Professional team</p>
-            <p>The <span className='text-red-500'>Eventkiya </span> is not only manage your events.It also generate a memorable moment in your life.</p>
-            </div>
-            <button className='m-3 ' style={{ width:"30vw", height:"3rem",  fontSize:"2rem" ,border:"3px solid black",borderRadius:"12px" }}><Link className='d-flex justify-center items-center' aria-disabled="true" to="/contact">Contact</Link></button>
+
+      {/* Static Grid Section (Optional) */}
+      <div className="flex flex-wrap justify-center gap-6 my-8 px-4">
+        {carouselItems.length > 0 ? carouselItems : <p>No items available to display.</p>}
+      </div>
+
+      {/* Dynamic Carousels */}
+      {renderCarousel('Birthday Decoration')}
+      {renderCarousel('Wedding Decoration')}
+      {renderCarousel('Anniversary Decoration')}
+
+      {/* CTA Section */}
+      <div className="text-center mt-16 px-4">
+        <h2 className="text-4xl md:text-5xl font-bold mb-3">Evaluate Your Events</h2>
+        <h3 className="text-3xl md:text-4xl font-semibold text-orange-600 mb-4">Trust Our Professional Team</h3>
+        <p className="text-lg max-w-2xl mx-auto mb-6">
+          <span className="text-red-500 font-semibold">EventKiya</span> doesn't just manage events —
+          we create <strong>unforgettable moments</strong> for life.
+        </p>
+
+        <Link
+          to="/contact"
+          className="inline-block bg-orange-500 text-white text-xl font-bold px-10 py-3 rounded-full shadow-lg hover:bg-orange-600 transition duration-300"
+        >
+          Contact Us
+        </Link>
+      </div>
     </div>
   );
 };

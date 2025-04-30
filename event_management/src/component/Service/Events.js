@@ -1,67 +1,98 @@
-import React from 'react'
+import React from 'react';
 
 const Events = () => {
-    return (
-        <div>
-            <div className='d-flex justify-around h-96'>
-                <div className='d-flex justify-center items-center w-[40%] h-full '>
-                    <p className='  font-bold' style={ { fontSize: "4rem" } }>Events</p>
-                </div>
-                <div className='d-flex justify-center items-center w-[60%] h-full'>
-                    <p className=' font-bold' style={ { fontSize: "2rem" } }>
-                        Our Mantra is to create new concepts and believe in bringing them live and breathing. Our in-house event team are the working force with every individual blessed with different skill set to bring the dream concept live and giving them wheels.
-
-                    </p>
-                </div>
-            </div>
-            <div className='d-flex justify-center h-[70vh]'>
-                <img src="services/event.jpg" alt="" srcset="" style={ { width: "100%", height: "100%" } } />
-            </div>
-            <div>
-                <p className=' font-bold' style={ { fontSize: "1.5rem" } }>At CS Entertainment, we specialize in curating unforgettable experiences that leave a lasting impression.</p>
-            </div>
-            <div className='m-3'>
-                <h1 className=' font-bold' style={ { fontSize: "2.5rem" } }>Here's how our ideation process works:</h1>
-                <div className='d-flex flex-col justify-around'>
-                    <p><span style={ { fontSize: "2rem", fontWeight: "bolder" } }>Corporate Events:</span>  From captivating conferences and high-profile product launches to engaging team-building retreats and corporate galas, our expertise in corporate event management shines through. Witness the seamless blend of professionalism and creativity in our curated corporate events.</p>
-
-                    <p><span style={ { fontSize: "2rem", fontWeight: "bolder" } }>Weddings and Celebrations:</span> Celebrating love and joy is at the heart of what we do. Explore our collection of breathtaking weddings, milestone celebrations, and extravagant parties. Immerse yourself in the enchanting ambiance, elegant decor, and personalized touches that make each event an unforgettable affair. </p>
-
-                    <p><span style={ { fontSize: "2rem", fontWeight: "bolder" } }>Social Gatherings:</span> Whether it's an intimate soirée or a grand social gathering, we bring people together in style. Our portfolio showcases a range of events, including cocktail receptions, themed parties, charity fundraisers, and more. Discover the vibrant atmosphere and impeccable execution that make our social events stand out. </p>
-
-                    <p><span style={ { fontSize: "2rem", fontWeight: "bolder" } }>Concerts and Festivals:</span> The stage is set, the crowd is eager, and the music fills the air. Experience the energy and excitement of our meticulously planned concerts and festivals. From selecting top-notch performers to designing immersive experiences, we create a harmonious blend of entertainment and ambiance. </p>
-
-                    <p><span style={ { fontSize: "2rem", fontWeight: "bolder" } }>Presentation:</span> </p>
-
-                    <p><span style={ { fontSize: "2rem", fontWeight: "bolder" } }>Community and Non-Profit: </span> Making a positive impact is a core value of our agency. Dive into our collection of community events, charity fundraisers, and non-profit initiatives. Each event is designed to inspire, engage, and bring people together for a greater cause.
-
-                        If you're ready to embark on your own extraordinary event, reach out to us today. Let us create a memorable experience that surpasses your expectations and sets the stage for an unforgettable celebration.</p>
-                </div>
-            </div>
-            <div className='m-4 text-3xl font-semibold'>
-                <p>Events Gallery</p>
-            </div>
-            <div className='flex m-14'>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/23.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "20vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/26.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "10vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/40.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "-4vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/11.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-                <div style={ { width: "25vw", height: "35vw", backgroundColor: "red", marginRight: "10px", marginTop: "5vh", borderRadius: "7%" } }>
-                    <img src="photogalleyimg/12.jpeg" alt="" srcset="" className='w-full h-full' />
-                </div>
-
-
-            </div>
+  return (
+    <div className="bg-white text-gray-800">
+      {/* Hero Section */}
+      <div className="flex flex-wrap items-center justify-between px-8 py-20 bg-gradient-to-r from-indigo-500 to-pink-500 text-white">
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h1 className="text-5xl font-bold mb-6">Events</h1>
+          <p className="text-xl font-medium">
+            Our mantra is to create unique concepts and bring them to life. Our in-house team transforms dreams into dynamic, unforgettable experiences.
+          </p>
         </div>
-    )
-}
+        <div className="w-full md:w-1/2 mt-10 md:mt-0">
+          <img
+            src="/services/event.jpg"
+            alt="Event"
+            className="rounded-xl shadow-xl w-full h-[400px] object-cover"
+          />
+        </div>
+      </div>
+
+      {/* Introduction */}
+      <div className="px-8 py-12 max-w-6xl mx-auto">
+        <p className="text-2xl font-semibold text-center mb-6">
+          At CS Entertainment, we specialize in curating unforgettable experiences that leave a lasting impression.
+        </p>
+      </div>
+
+      {/* Event Categories */}
+      <div className="bg-gray-100 px-8 py-16">
+        <h2 className="text-4xl font-bold text-center mb-10">Our Event Portfolio</h2>
+        <div className="space-y-10 max-w-4xl mx-auto">
+          {[
+            {
+              title: 'Corporate Events',
+              desc:
+                'From high-profile conferences to engaging retreats and galas, we deliver a seamless blend of professionalism and creativity.',
+            },
+            {
+              title: 'Weddings and Celebrations',
+              desc:
+                'Celebrate life’s most precious moments with elegance, charm, and personalized touches for a truly enchanting experience.',
+            },
+            {
+              title: 'Social Gatherings',
+              desc:
+                'From themed parties to fundraisers, our vibrant, stylish events are flawlessly executed and always memorable.',
+            },
+            {
+              title: 'Concerts and Festivals',
+              desc:
+                'High-energy concerts and immersive festivals—from talent sourcing to stage effects, we make it unforgettable.',
+            },
+            {
+              title: 'Community and Non-Profit',
+              desc:
+                'Driven by passion and purpose, we organize inspiring community events, fundraisers, and impactful initiatives.',
+            },
+          ].map(({ title, desc }, i) => (
+            <div key={i}>
+              <h3 className="text-2xl font-bold text-pink-600">{title}</h3>
+              <p className="text-md text-gray-700 mt-2">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="px-8 py-12 text-center">
+        <p className="text-xl font-medium max-w-3xl mx-auto">
+          If you're ready to create your own extraordinary event, reach out to us today. Let’s bring your vision to life with unmatched creativity and precision.
+        </p>
+      </div>
+
+      {/* Gallery */}
+      <div className="px-8 py-16">
+        <h2 className="text-4xl font-bold text-center mb-10">Events Gallery</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 place-items-center">
+          {['23.jpeg', '26.jpeg', '40.jpeg', '11.jpeg', '12.jpeg'].map((img, i) => (
+            <div
+              key={i}
+              className="w-[300px] h-[400px] overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition duration-300 bg-white"
+            >
+              <img
+                src={`/photogalleyimg/${img}`}
+                alt="Event"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Events;
