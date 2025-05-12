@@ -20,6 +20,8 @@ import Service from './component/Service/Service';
 import Login from './component/Login';
 import Registration from './component/Registration';
 import { useState } from 'react';
+import BookEvent from './component/Bookevent';
+import Upcoming from './component/Upcoming';
 
 function App() {
   return (
@@ -38,6 +40,8 @@ function MainApp() {
       {!hideNavbar && <Navbar />}
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/bookevent' element={<BookEvent />} />
+        <Route path='/getevent' element={<Upcoming />} />
         <Route path='/about' element={<About />} />
         <Route path='/login' element={<Login />} />
         <Route path='/registration' element={<Registration />} />

@@ -55,6 +55,8 @@ const Navbar = () => {
           </div>
 
           <Link to="/contact" className="hover:text-black transition">Contact</Link>
+          <Link to="/bookevent" className="hover:text-black transition">Book Event</Link>
+          <Link to="/getevent" className="hover:text-black transition">Upcoming Event</Link>
         </div>
 
         {/* User / Account */}

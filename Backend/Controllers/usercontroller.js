@@ -90,6 +90,7 @@ exports.controlUserLogin = async (req, res) => {
       message: "User logged in successfully",
       token,
       firstname: existUser.name,
+      email: existUser.email,
     });
 
   } catch (error) {

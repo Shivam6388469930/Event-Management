@@ -68,3 +68,6 @@
 .animate-fade-in-down {
   animation: fade-in-down 1s ease-out;
 }
+.input-field {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}

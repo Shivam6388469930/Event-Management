@@ -37,9 +37,10 @@ const Login = () => {
       if (!response.success) {
         alert("User access denied");
       } else {
-        const { message, token, firstname } = response;
+        const { message, token, firstname,email } = response;
         localStorage.setItem('token', token);
         localStorage.setItem('firstname', firstname);
+        localStorage.setItem('email', email);
         alert('Login successful!');
         navigate('/'); // Redirect to dashboard
       }

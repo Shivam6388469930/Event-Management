@@ -125,8 +125,8 @@ const Contact = () => {
                     <h3 className="text-2xl font-bold text-center text-gray-800 mb-6">
                         Contact <span className="text-yellow-500">Details</span>
                     </h3>
-                    <p className="mb-2">Email: <a href="mailto:agraharishivam6388@gmail.com" className="text-blue-600 hover:underline">agraharishivam6388@gmail.com</a></p>
-                    <p className="mb-4">Phone: <a href="tel:+6388469930" className="text-blue-600 hover:underline">6388469930</a></p>
+                    <p className="mb-2">Email: <a href="mailto:avnishpatel29@gmail.com" className="text-blue-600 hover:underline">agraharishivam6388@gmail.com</a></p>
+                    <p className="mb-4">Phone: <a href="tel:+7891081474" className="text-blue-600 hover:underline">6388469930</a></p>
 
                     <h3 className="text-2xl font-bold text-center text-gray-800 mb-4">
                         Social <span className="text-yellow-500">Media</span>
