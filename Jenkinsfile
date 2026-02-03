@@ -1,5 +1,10 @@
 pipeline {
   agent any
+  
+  tools {
+    sonarScanner 'sonar-scanner'
+  }
+
 
   environment {
     DOCKERHUB_CRED = credentials('dockerhub-creds')
